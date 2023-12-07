@@ -1,16 +1,21 @@
 ---
+import Layout from "../layouts/Layout.astro";
+import Nav from "../components/Nav.astro";
+import Hero from "../components/Hero.astro";
+import Footer from "../components/Footer.astro";
+import Ikon from "../components/Ikon.astro";
 
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+
+<Layout>
+<Nav/>
+<Hero/>
+
+<Ikon titel = "Oprettelse af testamente er gratis, når du støtter velgørenhed" tekst = "Oprettelse af testamente behøver ikke være dyrt. Hos Dokument24.dk er det gratis, hvis du betænker Plastic Change. Her kan du altså spare en advokat, som ellers ville kunne hjælpe mod betaling, til 3.000-8.000 kr." billede = "../img/penge_ikon.svg" />
+<Ikon titel = "Dine arvinger kan få mere ud af arven, når du støtter velgørenhed" tekst = "Optimer arven ved at betænke velgørende organisationer som delvis arving, fritaget for arveafgift, og på den måde frigøre midler til øvrige arvinger." billede = "../img/haender_ikon.svg"/>
+<Ikon titel = "Du kan altid ændre eller tilbagekalde testamentet" tekst = "Dit testamente kan til enhver tid ændres eller tilbagekaldes. Opretter du et testamente i fællesskab med din ægtefæller eller partner, bør det fremgå af testamentet, om længstlevende skal have mulighed for at ændre i testamentet." billede = "../img/testamente_ikon.svg"/>
+<Ikon titel = "Spørgsmål eller hjælp til din støtte" tekst = "Kontakt  info@plasticchange.org, hvis du har spørgsmål eller brug for hjælp til din støtte. Vi er klar til at hjælpe." billede = "../img/brev_ikon.svg"/>
+
+<Footer/>
+</Layout>
