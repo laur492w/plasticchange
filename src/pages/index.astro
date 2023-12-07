@@ -12,10 +12,39 @@ import Ikon from "../components/Ikon.astro";
 <Nav/>
 <Hero/>
 
-<Ikon titel = "Oprettelse af testamente er gratis, når du støtter velgørenhed" tekst = "Oprettelse af testamente behøver ikke være dyrt. Hos Dokument24.dk er det gratis, hvis du betænker Plastic Change. Her kan du altså spare en advokat, som ellers ville kunne hjælpe mod betaling, til 3.000-8.000 kr." billede = "../img/penge_ikon.svg" />
-<Ikon titel = "Dine arvinger kan få mere ud af arven, når du støtter velgørenhed" tekst = "Optimer arven ved at betænke velgørende organisationer som delvis arving, fritaget for arveafgift, og på den måde frigøre midler til øvrige arvinger." billede = "../img/haender_ikon.svg"/>
-<Ikon titel = "Du kan altid ændre eller tilbagekalde testamentet" tekst = "Dit testamente kan til enhver tid ændres eller tilbagekaldes. Opretter du et testamente i fællesskab med din ægtefæller eller partner, bør det fremgå af testamentet, om længstlevende skal have mulighed for at ændre i testamentet." billede = "../img/testamente_ikon.svg"/>
-<Ikon titel = "Spørgsmål eller hjælp til din støtte" tekst = "Kontakt  info@plasticchange.org, hvis du har spørgsmål eller brug for hjælp til din støtte. Vi er klar til at hjælpe." billede = "../img/brev_ikon.svg"/>
-
+<div class="ikoner">
+<Ikon titel = "Oprettelse af testamente er gratis, når du støtter velgørenhed" tekst = "Oprettelse af testamente behøver ikke være dyrt. Hos Dokument24.dk er det gratis, hvis du betænker Plastic Change. Her kan du altså spare en advokat, som ellers ville kunne hjælpe mod betaling, til 3.000-8.000 kr." ikon = "../img/penge2_ikon.svg" />
+<Ikon titel = "Dine arvinger kan få mere ud af arven, når du støtter velgørenhed" tekst = "Optimer arven ved at betænke velgørende organisationer som delvis arving, fritaget for arveafgift, og på den måde frigøre midler til øvrige arvinger." ikon = "../img/haender2_ikon.svg"/>
+<Ikon titel = "Du kan altid ændre eller tilbagekalde testamentet" tekst = "Dit testamente kan til enhver tid ændres eller tilbagekaldes. Opretter du et testamente i fællesskab med din ægtefæller eller partner, bør det fremgå af testamentet, om længstlevende skal have mulighed for at ændre i testamentet." ikon = "../img/testamente2_ikon.svg"/>
+<Ikon titel = "Spørgsmål eller hjælp til din støtte" tekst = "Kontakt  info@plasticchange.org, hvis du har spørgsmål eller brug for hjælp til din støtte. Vi er klar til at hjælpe." ikon = "../img/brev2_ikon.svg"/>
+</div>
 <Footer/>
 </Layout>
+
+
+<style>
+
+.ikoner {
+display: grid;
+
+}
+
+ikon { 
+justify-items: ;
+}
+
+@media (min-width: 1000px) {
+    .ikoner {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+		justify-items: center;
+		margin-inline: 8rem;
+
+    }
+	
+
+
+ }
+</style>
+
+</style>
