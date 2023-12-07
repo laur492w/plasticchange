@@ -6,6 +6,10 @@ body {
   font-family: "Rubik", sans-serif;
 }
 
+main {
+  margin: 3rem;
+}
+
 h1 {
   font-family: "Rubik", sans-serif;
 }
