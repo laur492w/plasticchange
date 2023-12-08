@@ -2,16 +2,88 @@
   margin: 0rem;
   box-sizing: border-box;
 }
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+html {
+  /* Primary colors */
+
+  /* Grey */
+  --grey-50-color: #ffffff;
+  --grey-100-color: #cacdd5;
+  --grey-200-color: #a3a6b4;
+  --grey-500-color: #70727e;
+  --grey-700-color: #4c4f55;
+  --grey-900-color: #1c1e23;
+
+  /* Blue */
+  --blue-50-color: #e9f2f5;
+  --blue-100-color: #a7dff3;
+
+  /* Contrast */
+  --contrast-500-color: #ff1054;
+
+  /* Spacing */
+
+  --spacing-xxs: 0.5rem;
+  /* --spacing-xs: 0.75rem; */
+  --spacing-s: 1rem;
+  --spacing-m: 1.25rem;
+  --spacing-l: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-xxl: 4rem;
+  --spacing-xxxl: 6.125rem;
+  /* --spacing-xxxxl: 8rem; */
+  --spacing-xxxxxl: 16rem;
+  --spacing-rare: 18.625rem;
+
+  /*Tokens spacing*/
+  --spacing-vilkaar: var(--spacing-xxs);
+  --spacing-sub-header: var(--spacing-s);
+  --spacing-infocard-text: var(--spacing-s);
+  --spacing-mellem-knapper: var(--spacing-l);
+  --spacing-infocard-ikon: var(--spacing-xl);
+  --spacing-knapper-info: var(--spacing-xxl);
+  --spacing-info-grid: var(--spacing-xxxl);
+  --spacing-header: var(--spacing-rare);
+  --spacing-section1: var(--spacing-xxxxxl);
+
+  /* Tokens colors */
+
+  /* Text */
+  --text-primary: var(--grey-500-color);
+  --text-secondary: var(--grey-900-color);
+  --text-h1: var(--grey-50-color);
+  --text-h2: var(--grey-900-color);
+  --text-sub-header: var(--grey-50-color);
+  --text-tertiaer: var(--grey-200-color);
+  --text-formular: var(--grey-700-color);
+  --text-button: var(--grey-50-color);
+
+  /* Surface */
+  --surface-primary: var(--grey-50-color);
+  --surface-primary-button: var(--contrast-500-color);
+  --surface-icon: var(--blue-50-color);
+  --surface-footer: var(--blue-100-color);
+
+  /* Stroke */
+  --stroke-form-primary: var(--grey-500-color);
+  --stroke-secondary: var(--contrast-500-color);
+
+  /* Spacing */
+}
+
 body {
   font-family: "Rubik", sans-serif;
 }
 
-main {
-  margin: 3rem;
-}
-
 h1 {
   font-family: "Rubik", sans-serif;
+  color: black;
 }
 
 h2 {

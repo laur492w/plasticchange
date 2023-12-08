@@ -29,14 +29,16 @@ form {
   display: grid;
   padding: 2rem;
   background: hsl(0, 0%, 100%);
-  border-radius: 8px;
-  border: 2px solid red;
+  border-radius: 1.9375rem;
+  border: 5px solid var(--contrast-500-color);
   gap: 20px;
+margin: 3rem;
 }
 
 .form-felt {
   display: grid;
 }
+
 
 /*** gør så det rykker sig på næste linje ***/
 label,
@@ -45,10 +47,6 @@ textarea,
 select,
 button {
   display: block;
-}
-
-.boks {
-  width: 100%;
 }
 
 
@@ -69,29 +67,6 @@ button {
 /* == Body styles == */
 body {
   line-height: 1.6;
-}
-
-/* Main styles */
-main {
-  max-width: 1000px;
-  margin-inline: auto;
-  padding-inline: 2rem;
-  margin-block: 3rem;
-}
-
-section {
-  display: grid;
-  gap: 3rem;
-  align-items: start;
-}
-
-section header {
-  display: grid;
-  gap: 1rem;
-}
-
-section header p {
-  color: hsl(264 10% 40%);
 }
 
 input[type=text] {

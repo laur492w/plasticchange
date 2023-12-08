@@ -1,0 +1,48 @@
+---
+import Formular from "./Formular.astro";
+---
+
+  
+  <div class="hero_grid">
+<img class="hero-pic" src="../img/hero_plasticchange.png" alt="Plastic i vandet" />
+  <div class="hero_landing">
+    <h1 class="hero_h1">GIV EN RENERE VERDEN VIDERE</h1>
+  <p class="hero_text">Kæmp mod plastikforurening nu og i fremtiden</p>
+  </div>
+  </div>
+  <Formular/>
+</div>
+
+<style>
+.hero_grid {
+  position: relative;
+  text-align: left;
+}
+
+.hero_landing {
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero_text {
+padding-bottom: var(--spacing-vandret-spacing-32);
+}
+
+
+p {
+  color: var(--grey-50-color);
+  color: black;
+}
+
+@media (min-width: 1000px) {
+
+  p {
+  color: var(--grey-50-color);
+  
+}
+}
+
+</style>
+
