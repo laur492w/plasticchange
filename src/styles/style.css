@@ -45,6 +45,7 @@ html {
   --spacing-vilkaar: var(--spacing-xxs);
   --spacing-sub-header: var(--spacing-s);
   --spacing-infocard-text: var(--spacing-s);
+  --spacing-button: var(--spacing-m);
   --spacing-mellem-knapper: var(--spacing-l);
   --spacing-infocard-ikon: var(--spacing-xl);
   --spacing-knapper-info: var(--spacing-xxl);
@@ -96,4 +97,9 @@ h3 {
 
 p {
   font-family: "Rubik", sans-serif;
+}
+
+@font-face {
+  font-family: "Campton-boldDEMO";
+  src: url(../fonte/Campton-BoldDEMO.otf);
 }

@@ -1,0 +1,57 @@
+---
+const {grafik,number,tekst} = Astro.props
+---
+
+<div class="infogrid">
+    
+    <h3 id="circle">{number}</h3>
+    <img src={grafik} alt="infografik">
+    <p>{tekst}</p>
+    </div>
+
+    <style>
+ img{
+    padding-top: 0.75rem;
+    width:50%
+ }
+ 
+
+ h3{
+    color:  var(--grey-50-color);
+    text-align: center;
+    padding-top: 0.5rem;
+ }
+
+ #circle{
+    background-color: var(--contrast-500-color);
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    flex:start;
+  
+ }
+
+ div{
+    padding: 2.063rem;
+ }
+
+ p{
+padding-top:0.5rem ;
+font-size: 0.75rem;
+line-height: 1.1875rem;
+color: var(--grey-500-color);
+ }
+
+ @media (min-width: 1000px) {
+.infogrid{
+   
+   }
+
+p{
+   font-size: 1rem;
+   font-weight:400;
+}
+}
+
+    </style>
+
