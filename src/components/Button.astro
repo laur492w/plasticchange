@@ -8,7 +8,7 @@ const {tekst, variant} = Astro.props
 {variant === "støt" && <a class="button-secondary buttom-primary:hover" href="info.astro"> {tekst} </a>
 }
 
-{variant === "testamente-stor" && <a class="button-stor buttom-stor:hover" href="info.astro"> {tekst} </a>
+{variant === "testamente-stor" && <a class="button-stor buttom-stor:hover" href="index.astro"> {tekst} </a>
 }
 
 <style>
@@ -28,7 +28,7 @@ text-decoration: none;
     padding-top: 0.625rem;
     padding-bottom: 0.625rem;
     font-weight: 700;
-
+    border: 0.125rem solid var(--contrast-500-color);
  
 }
 
@@ -68,6 +68,9 @@ text-decoration: none;
     padding-top: 0.625rem;
     padding-bottom: 0.625rem;
     font-weight: 700;
+    border: 0.125rem solid var(--contrast-500-color);
+  
+
 
  
 }

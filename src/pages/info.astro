@@ -15,12 +15,19 @@ import Button from "../components/Button.astro"
     <Infografik number = "1" grafik = "../img/SVG/inforgrafik_1.svg" tekst = "I 2017 blev der globalt produceret svimlende 322 millioner tons plastik. Mængden af plastaffald, der ender i havet, forventes at fordoble sig inden 2030. "/> 
     <Infografik number="2" grafik = "../img/SVG/inforgrafik_2.svg" tekst = "I 2040 vil plastikforurening  været tredoblet , og 80%  af den forurening vil udgøre engangsplastik"/>   
     <Infografik number="3" grafik = "../img/SVG/inforgrafik_3.svg"/>   
+   <div class="testamente-stor">
     <Button variant="testamente-stor" tekst= "Opret testamente"/>
+</div>
   
   
 </Layout>
 
 <style>
+.testamente-stor{
+    display:flex;
+    justify-content:center;
+}
+ 
      @media (min-width: 1000px) {
    .infogrid{
     display: grid;

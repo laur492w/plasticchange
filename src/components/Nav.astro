@@ -1,8 +1,34 @@
 ---
 import Button from "../components/Button.astro"
 ---
-
-
+<header>
+    <a href="/">
+<img src="../img/plasticchangelogo.png" alt="logo" id="logo">
+</a>
+   <div class= "knapper">
 <Button variant="støt" tekst= "Støt fordi..."/>
 <Button variant="testamente" tekst= "Opret testamente"/>
 
+</div>
+</header>
+
+<style>
+    #logo {
+      width: 10rem;
+    }
+
+    .knapper {
+      display: flex;
+      justify-content: flex-end; /* Opdateret linje for at placere til højre */
+      align-items: center;
+      flex-grow: 1; /* Tilføjet linje for at få knapperne til at tage op resten af pladsen */
+      gap: var(--spacing-mellem-knapper);
+    }
+
+    header {
+      display: flex; /* Tilføjet linje for at aktivere flex-container på header */
+      justify-content: space-between; /* Tilføjet linje for at have afstand mellem logo og knapper */
+      align-items: center;
+    }
+
+</style>
