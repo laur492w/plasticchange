@@ -1,44 +1,55 @@
-<section>
+---
+import Button from "../components/Button.astro"
+---
+
+<div class="hero-grid">
+<section class="formular-grid">
         <form name="kontakt" netlify>
           <!-- Formular-indhold -->
                  <h2>OPRET TESTAMENTE</h2>
-                 <p></p>
+                 <p>Støt en ren klode for fremtidige generationer ved at inkludere Plastic Change i dit testamente. Opret det gratis hos Dokument 24 og start allerede her.</p>
           <div class="form-felt">
             <label for="full-name">Fornavn</label>
-            <input placeholder="Dit fornavn" id="full-name" name="fname" type="text" required />
+            <input placeholder="Benny" id="full-name" name="fname" type="text" required />
           </div>
 
           <div class="form-felt">
             <label for="full-name">Efternavn</label>
-            <input placeholder="Dit efternavn" id="full-name" name="fname" type="text" required />
+            <input placeholder="Andersen" id="full-name" name="fname" type="text" required />
           </div>
 
           <div class="form-felt">
             <label for="email">E-mail</label>
             <input placeholder="din@mail.com" id="email" name="email" type="email" required />
           </div>
-
-          <button>OPRET TESTAMENTE</button>
+<div class="knap">
+          <Button variant="testamente" tekst= "Opret testamente"/>
+        </div>
         </form>
       </section>
+    </div>
 
       <style>
 
-    /* Dine styles her */
+.hero-grid{
+  margin: 1rem;
+}
 form {
   display: grid;
-  padding: 2rem;
+  padding-top:  var(--spacing-knapper-info);
+  padding-bottom: var(--spacing-knapper-info);
+  padding-left: var(--spacing-forumlar);
+  padding-right: var(--spacing-forumlar);
   background: hsl(0, 0%, 100%);
   border-radius: 1.9375rem;
   border: 5px solid var(--contrast-500-color);
   gap: 20px;
-margin: 3rem;
 }
 
 .form-felt {
   display: grid;
+ 
 }
-
 
 /*** gør så det rykker sig på næste linje ***/
 label,
@@ -49,20 +60,6 @@ button {
   display: block;
 }
 
-
-button {
-  background-color: #3c4c8c;
-  color: white;
-  border: none;
-  padding: 1rem 3rem 1rem 3rem;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 1rem;
-  border-radius: 2rem;
-  margin: 1rem;
-  font-family: kiln-sans, sans-serif;
-}
 
 /* == Body styles == */
 body {
@@ -89,7 +86,7 @@ input[type=email] {
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
-  border: 1.5px solid #ccc;
+  border: 1.5px solid var(--grey-500-color);;
 
   outline: none;
 }
@@ -102,5 +99,84 @@ h2{
   font-family: "Campton-boldDEMO";
 }
 
+p{
+  color: var(--grey-500-color);
+}
 
+.knap{
+  align-items: center;
+  text-align: center;
+}
+
+
+
+@media (min-width: 1000px) {
+  /* .hero-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 20px;
+    margin: 2rem;
+  }
+
+  .formular-grid {
+    grid-column: 6/9;
+
+  } */
+
+  form {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: var(--spacing-forumlar-top:);
+    background: hsl(0, 0%, 100%);
+    border-radius: 1.9375rem;
+    border: 5px solid var(--contrast-500-color);
+    gap: 20px;
+  }
+
+  .form-felt {
+    display: grid;
+    font-size: 1.2rem;
+  }
+
+  label,
+  input,
+  textarea,
+  select,
+  button {
+    display: block;
+  }
+
+  input[type="text"],
+  input[type="email"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1.5px solid var(--grey-500-color);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+  }
+
+  input[type="text"]:focus,
+  input[type="email"]:focus {
+    border: 1.5px solid var(--grey-900-color);
+  }
+
+  h2 {
+    font-family: "Campton-boldDEMO";
+    text-align: center;
+    font-size: 1.75rem;
+  }
+
+  p {
+    color: var(--grey-500-color);
+    font-size: 0.89rem;
+  }
+
+  .knap {
+    align-items: center;
+    text-align: center;
+  }
+}
       </style>

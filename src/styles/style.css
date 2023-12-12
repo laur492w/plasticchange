@@ -39,6 +39,8 @@ html {
   --spacing-xxxl: 6.125rem;
   /* --spacing-xxxxl: 8rem; */
   --spacing-xxxxxl: 16rem;
+  --spacing-xxxxxxl: 5rem;
+  --spacing-xxxxxxxl: 3rem;
   --spacing-rare: 18.625rem;
 
   /*Tokens spacing*/
@@ -52,7 +54,8 @@ html {
   --spacing-info-grid: var(--spacing-xxxl);
   --spacing-header: var(--spacing-rare);
   --spacing-section1: var(--spacing-xxxxxl);
-
+  --spacing-forumlar: var(--spacing-xxxxxxl);
+  --spacing-forumlar-top: var(--spacing-xxxxxxl);
   /* Tokens colors */
 
   /* Text */
@@ -80,7 +83,7 @@ html {
 
 body {
   font-family: "Rubik", sans-serif;
-  margin: 2rem;
+  margin: 0rem;
 }
 
 h1 {

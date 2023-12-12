@@ -13,6 +13,7 @@ const {tekst, variant} = Astro.props
 
 <style>
 
+
 a{
 text-decoration: none;
 }
@@ -86,4 +87,79 @@ text-decoration: none;
 main{
     margin-top:50rem;
 }
+
+
+@media (min-width: 1000px) {
+a{
+text-decoration: none;
+}
+
+    
+.button-primary{
+    background-color: var(--contrast-500-color);
+    font-size: 1rem;
+    border-radius: 3.125rem;
+    color: var(--grey-50-color);
+    padding-left: var(--spacing-button);
+    padding-right: var(--spacing-button);
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+    font-weight: 700;
+    border: 0.125rem solid var(--contrast-500-color);
+ 
+}
+
+.button-primary:hover{
+    background-color: var(--grey-50-color);
+    color:var(--contrast-500-color);
+    border: 0.125rem solid var(--contrast-500-color);
+
+}
+
+.button-secondary{
+    background-color: var(--grey-50-color);
+    font-size: 1rem;
+    border-radius: 3.125rem;
+    color: var(--contrast-500-color);
+    padding-left: var(--spacing-button);
+    padding-right: var(--spacing-button);
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+    font-weight: 700;
+    border: 0.125rem solid var(--contrast-500-color);
+}
+
+.button-secondary:hover{
+    background-color: var(--contrast-500-color);
+    color:var(--grey-50-color);
+
+}
+
+.button-stor{
+    background-color: var(--contrast-500-color);
+    font-size: 1.5rem;
+    border-radius: 3.125rem;
+    color: var(--grey-50-color);
+    padding-left: var(--spacing-infocard-ikon);
+    padding-right: var(--spacing-infocard-ikon);
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+    font-weight: 700;
+    border: 0.125rem solid var(--contrast-500-color);
+  
+
+
+ 
+}
+
+.button-stor:hover{
+    background-color: var(--grey-50-color);
+    color:var(--contrast-500-color);
+    border: 0.125rem solid var(--contrast-500-color);
+
+}
+}
+
+
+
 </style>

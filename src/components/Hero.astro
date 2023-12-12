@@ -4,28 +4,29 @@ import Formular from "./Formular.astro";
 
   
   <div class="hero_grid">
-<img class="hero-pic" src="../img/hero_plasticchange.png" alt="Plastic i vandet" />
+<img class="hero-pic" src="../img/SVG/herobillede.svg" alt="Plastic i vandet" />
   <div class="hero_landing">
     <h1 class="hero_h1">GIV EN RENERE VERDEN VIDERE</h1>
+  </div>
   <p class="hero_text">Kæmp mod plastikforurening nu og i fremtiden</p>
-  </div>
-  </div>
+  <div class="hero-formular">
   <Formular/>
+</div>
+  </div>
+
+
 </div>
 
 <style>
 .hero_grid {
-  position: relative;
   text-align: left;
-
 }
 
 .hero_landing {
   position: absolute;
-  top: 50%; 
-  left: 50%;
-  transform: translate(-50%, -50%);
-
+  /* left: 50%;
+  transform: translate(-50%, -50%); */
+z-index:100%;
 }
 
 .hero_text {
@@ -43,12 +44,52 @@ p {
   color: black;
 }
 
-@media (min-width: 1000px) {
-
-  p {
-  color: var(--grey-50-color);
+.hero-pic{
   
 }
+
+@media (min-width: 1000px) {
+
+
+ .hero_grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.hero_landing{
+  font-size: 3.75rem;
+  grid-row:  2/3;
+  grid-column: 2/4;
+}
+.hero_text{
+  margin:2rem;
+
+}
+
+ .hero-pic{
+  grid-column: 1/9;
+  grid-row: 1/6;
+}
+
+  .hero_h1{
+    font-size: 3.75rem;
+    margin: 2rem;
+  }
+  p {
+  color: var(--grey-50-color);
+    grid-row:  5/6;
+    grid-column: 1/4;
+    margin:2rem;
+}
+.hero-formular{
+  grid-row: 1/6;
+  grid-column:6/9;
+  margin-bottom:3rem;
+  margin-top:2rem;
+  margin-right: 2rem;
+}
+
 }
 
 </style>

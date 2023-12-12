@@ -29,6 +29,26 @@ import Button from "../components/Button.astro"
       display: flex; /* Tilføjet linje for at aktivere flex-container på header */
       justify-content: space-between; /* Tilføjet linje for at have afstand mellem logo og knapper */
       align-items: center;
+      margin: 1rem 2rem 0 2rem;
+      
     }
+
+    @media (min-width: 1000px) {
+      #logo {
+      width: 10rem;
+    }
+
+    .knapper {
+      display: flex;
+      justify-content: flex-end; /* Opdateret linje for at placere til højre */
+      align-items: center;
+      flex-grow: 1; /* Tilføjet linje for at få knapperne til at tage op resten af pladsen */
+      gap: var(--spacing-mellem-knapper);
+    }
+
+    header {
+    
+    }
+  }
 
 </style>
