@@ -2,8 +2,8 @@
 const {ikon,titel,tekst} = Astro.props
 ---
 
-<div >
-<img id="circle" src={ikon} alt="ikon">
+<div>
+<img src={ikon} alt="ikon">
 <h3>{titel}</h3>
 <p>{tekst}</p>
 </div>
@@ -12,13 +12,10 @@ const {ikon,titel,tekst} = Astro.props
 <style>
 
 
-#circle {
-    background: rgb(243, 194, 194);
-    border-radius: 50%;
-}
-
 img {
     margin: 2rem;
+    width: 13.25rem;
+
 }
 
 </style>

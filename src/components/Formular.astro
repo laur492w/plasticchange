@@ -22,18 +22,32 @@ import Button from "../components/Button.astro"
             <label for="email">E-mail</label>
             <input placeholder="din@mail.com" id="email" name="email" type="email" required />
           </div>
+
+          <div class="form-control">
+            <div class="checkbox-container">
+              <input type="checkbox" id="brev" name="interest" value="kodning" checked>
+              <label for="brev">Tilmeld Plastic Changes nyhedsbrev</label>
+            </div>
+          </div>
+
+
 <div class="knap">
-          <Button variant="testamente" tekst= "Opret testamente"/>
+          <Button variant="testamente" tekst= "Opret gratis testamente"/>
         </div>
         </form>
       </section>
     </div>
 
       <style>
-
-.hero-grid{
-  margin: 1rem;
+.checkbox-container {
+  display: flex; /* Use flexbox to align items horizontally */
+  align-items: center; /* Center items vertically */
 }
+
+.checkbox-container input {
+  margin-right: 10px; /* Add some spacing between the checkbox and label */
+}
+
 form {
   display: grid;
   padding-top:  var(--spacing-knapper-info);
@@ -53,10 +67,7 @@ form {
 
 /*** gør så det rykker sig på næste linje ***/
 label,
-input,
-textarea,
-select,
-button {
+input{
   display: block;
 }
 
@@ -97,6 +108,7 @@ input[type=email]:focus{
 
 h2{
   font-family: "Campton-boldDEMO";
+
 }
 
 p{
@@ -128,14 +140,15 @@ p{
     grid-template-columns: 1fr;
     padding: var(--spacing-forumlar-top:);
     background: hsl(0, 0%, 100%);
-    border-radius: 1.9375rem;
-    border: 5px solid var(--contrast-500-color);
+    border-radius: 0.75rem;
+    border: 3px solid var(--contrast-500-color);
     gap: 20px;
   }
 
   .form-felt {
     display: grid;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    margin-bottom: ;
   }
 
   label,
@@ -149,8 +162,8 @@ p{
   input[type="text"],
   input[type="email"] {
     width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
+    padding: 8px 12px;
+    margin: 3px 0;
     box-sizing: border-box;
     border: 1.5px solid var(--grey-500-color);
     -webkit-transition: 0.5s;
@@ -166,7 +179,7 @@ p{
   h2 {
     font-family: "Campton-boldDEMO";
     text-align: center;
-    font-size: 1.75rem;
+    font-size: 1.9rem;
   }
 
   p {
