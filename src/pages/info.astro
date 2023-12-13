@@ -5,21 +5,31 @@ import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
 import Infografik from "../components/Infografik.astro"
 import Button from "../components/Button.astro"
+
 ---
 
 
 
 <Layout>
     <Nav/>
-
+    <div class="støt_grid">
+        <!-- <img class="hero-pic" src="../img/SVG/infobillede.svg" alt="Plastic i vandet" /> -->
+          <div class="hero_landing">
+            <h1 class="h1_støtfordi">DU SKAL<br> STØTTE FORDI</h1>
+          </div>
+          <p class="støtfordi_tekst">Hver dag forurenes naturen med tusindvis af plaststykker, som aldrig forsvinder igen. Hvert minut tømmes plastikaffald ud i havet, som vikler sig rundt om sæler, skildpadder, delfiner og ender i maver på hvaler, fugle og fisk</p>
+        </div>
+  
+<div class="info_wrapper">
     <Infografik number = "1" grafik = "../img/SVG/inforgrafik_1.svg" tekst = "I 2017 blev der globalt produceret svimlende 322 millioner tons plastik. Mængden af plastaffald, der ender i havet, forventes at fordoble sig inden 2030. "/> 
-    <Infografik number="2" grafik = "../img/SVG/inforgrafik_2.svg" tekst = "I 2040 vil plastikforurening  været tredoblet , og 80%  af den forurening vil udgøre engangsplastik"/>   
+    <Infografik side="right" number="2" grafik = "../img/SVG/inforgrafik_2.svg" tekst = "I 2040 vil plastikforurening  været tredoblet , og 80%  af den forurening vil udgøre engangsplastik"/>   
     <Infografik number="3" grafik = "../img/SVG/inforgrafik_3.svg"/>   
+</div>
    <div class="testamente-stor">
     <Button variant="testamente-stor" tekst= "Opret testamente"/>
 </div>
   
-  
+<Footer/>
 </Layout>
 
 <style>
@@ -27,13 +37,84 @@ import Button from "../components/Button.astro"
     display:flex;
     justify-content:center;
 }
+
+.hero-pic{
+background-image: url(../img/SVG/infobillede.svg);
+        width: 100%;
+        background-size: cover;
+        padding-top: 20rem;
+    }
+
+
+
+   .info_wrapper{
+    margin-inline:4rem;
+   }
+
+   .h1_støtfordi{
+    font-size: 2rem;
+    margin:2rem;
+    color: var(--text-h1);
+    font-family: "Campton";
+
+  
+}
+
+.støtfordi_tekst{
+color: var(--text-h1);
+  margin:2rem;
+  line-height: 1.75rem;
+
  
+
+   }
+   .støt_grid{
+ display: flex;
+ flex-direction: column;
+  background-image: url(../img/SVG/infobillede.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 2rem;
+}
+ 
+
      @media (min-width: 1000px) {
    .infogrid{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    
+    justify-items: right;
    }
+
+   .info_wrapper{
+    margin-inline:10rem;
+   }
+
+   .støt_grid{
+ display: flex;
+ flex-direction: column;
+  background-image: url(../img/SVG/infobillede.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 7rem;
 }
+   
+   .h1_støtfordi{
+    font-size: 3.75rem;
+    margin:2rem;
+    color: var(--text-h1);
+    width: 500px;
+  
+}
+
+.støtfordi_tekst{
+color: var(--text-h1);
+  margin:2rem;
+  line-height: 1.75rem;
+    width: 500px;
+   }
+
+   }
+
+
+
 
 </style>

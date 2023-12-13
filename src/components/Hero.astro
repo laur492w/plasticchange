@@ -4,11 +4,12 @@ import Formular from "./Formular.astro";
 
   
   <div class="hero_grid">
-<img class="hero-pic" src="../img/SVG/herobillede.svg" alt="Plastic i vandet" />
+<!-- <img class="hero-pic" src="../img/SVG/herobillede.svg" alt="Plastic i vandet" /> -->
   <div class="hero_landing">
     <h1 class="hero_h1">GIV EN RENERE<br> VERDEN VIDERE</h1>
-  </div>
   <p class="hero_text">Kæmp mod plastikforurening nu og i fremtiden</p>
+</div>
+
   <div class="hero-formular">
   <Formular/>
 </div>
@@ -20,24 +21,33 @@ import Formular from "./Formular.astro";
 <style>
 .hero_grid {
   text-align: left;
+  
 }
 
-.hero_landing {
-  position: absolute;
-  /* left: 50%;
-  transform: translate(-50%, -50%); */
-z-index:100%;
+.hero_landing{
+  background-image: url("../img/SVG/herobillede.svg");
+  background-size: cover;
+  padding-top: 4rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
 }
+
 
 .hero_text {
 padding-bottom: var(--spacing-vandret-spacing-32);
 color: var(--grey-50-color);
 font-family: "Campton-boldDEMO";
+margin-top: 4rem;
+
+
 }
 
 .hero_h1{
   color: var(--grey-50-color);
   font-family: "Campton-boldDEMO";
+  margin-top: 1rem;
+  margin-bottom: 10rem;
+  
 }
 p {
   color: var(--grey-50-color);
@@ -52,19 +62,39 @@ p {
 
 
  .hero_grid{
-  display:grid;
+  /* display:grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr; */
+  display: flex;
+  flex-direction: row;
+  background-image: url("../img/SVG/herobillede.svg");
+  background-size: cover;
+  justify-content: space-between;
+  gap: 5rem;
 }
 
 .hero_landing{
   font-size: 3.75rem;
-  grid-row:  2/3;
-  grid-column: 2/4;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  /* grid-row:  2/4;
+  grid-column: 1/6; */
+
 }
 .hero_text{
   margin:2rem;
+  align-self: center;
+  position: relative;
+}
 
+.hero_text::before{
+  content: "";
+  width: 100%;
+  position: absolute;
+  height: 1px;
+  background-color: white;
+  top: -0.5rem;
 }
 
  .hero-pic{
@@ -74,7 +104,8 @@ p {
 
   .hero_h1{
     font-size: 3.75rem;
-    margin: 2rem;
+    margin-inline: 2rem;
+    margin-top:5rem;
   }
   p {
   color: var(--grey-50-color);
@@ -84,11 +115,12 @@ p {
     font-size: 1.25rem;
 }
 .hero-formular{
-  grid-row: 1/6;
-  grid-column:6/9;
+  /* grid-row: 1/6;
+  grid-column:6/9; */
   margin-bottom:3rem;
   margin-top:3rem;
   margin-right: 2rem;
+  max-width: 40%;
 }
 
 }
