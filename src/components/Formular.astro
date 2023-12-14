@@ -3,7 +3,7 @@ import Button from "../components/Button.astro"
 ---
 
 <div class="hero-grid">
-<section class="formular-grid">
+<section class="formular-grid slide-in-right">
         <form name="kontakt" method="post" action="https://dokument24.dk/dok/opret-testamente" netlify>
           <!-- Formular-indhold -->
                  <h2>OPRET TESTAMENTE</h2>
@@ -140,17 +140,18 @@ p{
   form {
     display: grid;
     grid-template-columns: 1fr;
-    padding: var(--spacing-forumlar-top:);
+    padding: var(--spacing-forumlar);
     background: hsl(0, 0%, 100%);
     border-radius: 0.75rem;
     border: 3px solid var(--contrast-500-color);
     gap: 20px;
+
   }
 
   .form-felt {
     display: grid;
     font-size: 1rem;
-    margin-bottom: ;
+   
   }
 
   label,
@@ -191,4 +192,9 @@ p{
     text-align: center;
   }
 }
+
+.slide-in-right{animation:slide-in-right 1.5s cubic-bezier(.25,.46,.45,.94) both}
+
+
+@keyframes slide-in-right{0%{transform:translateX(1000px);opacity:0}100%{transform:translateX(0);opacity:1}}
       </style>

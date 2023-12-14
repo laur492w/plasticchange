@@ -2,7 +2,7 @@
 const {tekst, variant} = Astro.props
 ---
 
-{variant === "testamente" && <button class="button-primary button-primary:hover" type="submit"> {tekst} </button>
+{variant === "testamente" && <a class="button-primary button-primary:hover" href="/"> {tekst} </a>
 }
 
 {variant === "støt" && <a class="button-secondary button-primary:hover" href="info"> {tekst} </a>
@@ -11,7 +11,7 @@ const {tekst, variant} = Astro.props
 {variant === "testamente-stor" && <a class="button-stor button-stor:hover" href="/"> {tekst} </a>
 }
 
-{variant === "gratis" && <a class="button-primary-gratis button-primary-gratis:hover" href="/"> {tekst} </a>
+{variant === "gratis" && <button class="button-primary-gratis button-primary-gratis:hover" type="submit"> {tekst} </button>
 }
 
 
@@ -36,6 +36,7 @@ text-decoration: none;
     border: 0.125rem solid var(--contrast-500-color);
 }
 
+.button-primary-gratis:hover,
 .button-primary:hover{
     background-color: var(--grey-50-color);
     color:var(--contrast-500-color);

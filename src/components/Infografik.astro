@@ -5,7 +5,7 @@ const {grafik,number,tekst,side} = Astro.props
 
 <div class=`infogrid ${side}`>
     <div class=`card_wrapper ${side}`>
-    <h3 class=`circle `>{number}</h3>
+   
     <img src={grafik} alt="infografik">
     <p>{tekst}</p>
     </div>
@@ -14,10 +14,8 @@ const {grafik,number,tekst,side} = Astro.props
     <style>
  img{
     padding-top: 0.75rem;
-    width:50%
+    width:100%;
  }
- 
-
  h3{
     color:  var(--grey-50-color);
     text-align: center;
@@ -30,8 +28,6 @@ const {grafik,number,tekst,side} = Astro.props
     width: 2.5rem;
     height: 2.5rem;
     flex:start;
-
-  
  }
 
  div{
@@ -44,6 +40,7 @@ padding-top:0.5rem ;
 font-size: 0.75rem;
 line-height: 1.1875rem;
 color: var(--grey-500-color);
+
  }
 
  .card-wrapper{
@@ -51,28 +48,34 @@ color: var(--grey-500-color);
  }
 
  @media (min-width: 1000px) {
-.infogrid{
+/* .infogrid{
    display: grid;
-   }
+   } */
 
 p{
-   font-size: 1rem;
+   font-size: 1.25rem;
    font-weight:400;
+   line-height: 1.75;
+
 }
 
-.right{
+/* .right{
    justify-items: right;
-}
+} */
 
 .card_wrapper{
    max-width: 100rem;
    display: grid;
+   justify-items: center;
 }
 div{
     padding-top: 2rem;
     padding-bottom: 2rem;
  }
-
+ img{
+    padding-top: 0.75rem;
+    width:70%;
+ }
 
 }
 

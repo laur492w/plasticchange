@@ -1,26 +1,133 @@
+
 <div class="footer">
-    <a href="/">
-        <img src="../img/plasticchangelogo.png" alt="logo" id="logo">
+    <div class="overlay">
+        <a href="/">
+            <img class="logo" src="../img/plasticchangelogo.png" alt="logo" id="logo">
         </a>
+
+        <div class="contact">
+            <p>Mail: info@plasticchange.org</p>
+            <p>Tlf: +45 42 66 72 46</p>
+            <p>Åbningstider: Mandag-fredag 10:00-15:00</p>
+        </div>
+        <div class="links">
+         
+            <p><a href="/">Opret Testamente</a></p>
+            <p><a href="info">Derfor skal du støtte</a></p>
+            <p><a href="https://www.hjemhavn.dk/collections/plastic-change-merchandise">Shop</a></p>
+        </div>
+        <div class="social">
+            <a href="https://www.facebook.com/plasticchange/" class="icon"><img src="../img/svg-logoer/facebook.svg"></a>
+            <a href="https://twitter.com/plasticchange" class="icon"><img src="../img/svg-logoer/twitter.svg"></a>
+            <a href="https://www.linkedin.com/company/plastic-change/" class="icon"><img src="../img/svg-logoer/linkedin.svg"></a>
+            <a href="https://www.youtube.com/channel/UCgLD-akVpdrJPPds2qoNA8g" class="icon"><img src="../img/svg-logoer/youtube.svg"></a>
+            <a href="https://www.instagram.com/plasticchange" class="icon"><img src="../img/svg-logoer/instagram.svg"></a>
+        </div>
+    </div>
 </div>
 
+
 <style>
-img{
-    margin-top:20rem;
+
+    
+
+.logo {
+    margin-top: 20rem;
+}
+
+.social{
+    width: 2rem;
+
 }
 
 #logo {
     width: 10rem;
-    margin: 1rem 2rem 0 2rem;
-position: relative;
-    }
+    margin:  1rem 2rem 0rem 2rem;
+    position: relative;
+    
+}
 
-    .footer{
-        background-image: url(../img/SVG/footer.svg);
-        width: 100%;
-        background-size: cover;
-        padding-top: 20rem;
-        margin-top: 15rem;
-    }
+.footer {
+    background-image: url(../img/SVG/footer.svg);
+    width: 100%;
+    background-size: cover;
+    padding-top: 15rem;
+    margin-top: 15rem;
+}
+
+
+
+.contact, .links, .social {
+    text-align: left;
+    position: relative;
+    margin-bottom: 2rem;
+    color: var(--text-tertiaer);
+    margin-inline:2rem;
+}
+   
+.social{
+    margin-bottom: 2rem;
+    width: 1rem;
+}
+.links{
+    line-height: 3rem;
+}
+
+.contact{
+    line-height: 3rem;
+    margin-top: 1rem;
+}
+
+
+.links a {
+    text-decoration: none;
+    position: relative;
+    text-decoration: none;
+    line-height: 2rem;
+    color: var(--text-tertiaer);
+}
+
+.icon {
+    margin-right: 10px;
+    position: relative;
+    color: var(--surface-primary-button);
+}
+
+@media (min-width: 1000px) {
+
+    .footer {
+    width: 100%;
+    background-size: cover;
+    padding-top: 15rem;
+    margin-top: 15rem;
+}
+.overlay {
+    display: flex;
+    justify-content: space-around;
+}
+
+.contact, .links, .social {
+    text-align: left;
+    position: relative;
+    margin-bottom: 5rem;
+    color: var(--text-tertiaer);
+    margin-inline:0rem;
+}
+
+.contact{
+    margin-top: 0rem;
+}
+
+p:hover a:hover{
+    color: var(--text-primary);
+}
+
+.social{
+    width: 1.5rem;
+    
+
+}
+
+}
 
 </style>

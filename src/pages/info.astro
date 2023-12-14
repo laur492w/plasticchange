@@ -14,15 +14,31 @@ import Button from "../components/Button.astro"
     <Nav/>
     <div class="støt_grid">
         <!-- <img class="hero-pic" src="../img/SVG/infobillede.svg" alt="Plastic i vandet" /> -->
-          <div class="hero_landing">
+       <div class="tekst">
+        <div class="hero_landing">
             <h1 class="h1_støtfordi">DU SKAL<br> STØTTE FORDI</h1>
           </div>
           <p class="støtfordi_tekst">Hver dag forurenes naturen med tusindvis af plaststykker, som aldrig forsvinder igen. Hvert minut tømmes plastikaffald ud i havet, som vikler sig rundt om sæler, skildpadder, delfiner og ender i maver på hvaler, fugle og fisk</p>
         </div>
+        <div class="animationer">
+            <div class="container1 vibrate-1">
+            <img class="img" id="dunk" src="../img/SVG/dunk.svg">
+        </div>
+        <div class="container2 vibrate-2">
+            <img class="img" id="pose" src="../img/SVG/pose.svg">
+        </div>
+        <div class="container3 vibrate-1">
+            <img class="img" id="flaske1" src="../img/SVG/flaske1.svg">
+        </div>
+            
+        </div>   
+        </div>
+
+    
   
 <div class="info_wrapper">
     <Infografik number = "1" grafik = "../img/SVG/inforgrafik_1.svg" tekst = "I 2017 blev der globalt produceret svimlende 322 millioner tons plastik. Mængden af plastaffald, der ender i havet, forventes at fordoble sig inden 2030. "/> 
-    <Infografik side="right" number="2" grafik = "../img/SVG/inforgrafik_2.svg" tekst = "I 2040 vil plastikforurening  været tredoblet , og 80%  af den forurening vil udgøre engangsplastik"/>   
+    <Infografik side="right" number="2" grafik = "../img/SVG/info2.svg" tekst = "I 2040 vil plastikforurening  været tredoblet , og 80%  af den forurening vil udgøre engangsplastik"/>   
     <Infografik number="3" grafik = "../img/SVG/inforgrafik_3.svg"/>   
 </div>
    <div class="testamente-stor">
@@ -45,8 +61,6 @@ background-image: url(../img/SVG/infobillede.svg);
         padding-top: 20rem;
     }
 
-
-
    .info_wrapper{
     margin-inline:4rem;
    }
@@ -59,7 +73,6 @@ background-image: url(../img/SVG/infobillede.svg);
 
   
 }
-
 .støtfordi_tekst{
 color: var(--text-h1);
   margin:2rem;
@@ -70,11 +83,14 @@ color: var(--text-h1);
    }
    .støt_grid{
  display: flex;
- flex-direction: column;
+ flex-direction: row;
   background-image: url(../img/SVG/infobillede.svg);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 2rem;
+}
+.animationer {
+    display: none;
 }
  
 
@@ -90,13 +106,49 @@ color: var(--text-h1);
 
    .støt_grid{
  display: flex;
- flex-direction: column;
+ flex-direction: row;
   background-image: url(../img/SVG/infobillede.svg);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 7rem;
 }
-   
+
+.animationer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 100%;
+}
+
+.img {
+    width: 150px;
+}
+
+
+.container1{
+    grid-column: span 2;
+    justify-self: center;
+
+}
+
+.container2 {
+    justify-self: end ;
+    padding-right: 4rem;
+
+}
+
+.vibrate-1 {
+	-webkit-animation: vibrate-1 5s linear infinite both;
+	        animation: vibrate-1 5s linear infinite both;
+}
+
+
+ @keyframes vibrate-1{0%{transform:translate(0)}20%{transform:translate(-2px,2px)}40%{transform:translate(-2px,-2px)}60%{transform:translate(2px,2px)}80%{transform:translate(2px,-2px)}100%{transform:translate(0)}}
+
+ .vibrate-2{animation:vibrate-2 3s ease-in-out infinite both}
+
+
+@keyframes vibrate-2{0%{transform:translate(0)}20%{transform:translate(-2px,2px)}40%{transform:translate(-2px,-2px)}60%{transform:translate(2px,2px)}80%{transform:translate(2px,-2px)}100%{transform:translate(0)}}
    .h1_støtfordi{
     font-size: 3.75rem;
     margin:2rem;
