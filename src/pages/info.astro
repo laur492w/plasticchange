@@ -16,10 +16,13 @@ import Button from "../components/Button.astro"
         <!-- <img class="hero-pic" src="../img/SVG/infobillede.svg" alt="Plastic i vandet" /> -->
        <div class="tekst">
         <div class="hero_landing">
-            <h1 class="h1_støtfordi">DU SKAL<br> STØTTE FORDI</h1>
+            <h1 class="h1_støtfordi tilt-in-left-1">DU SKAL<br> STØTTE FORDI</h1>
           </div>
-          <p class="støtfordi_tekst">Hver dag forurenes naturen med tusindvis af plaststykker, som aldrig forsvinder igen. Hvert minut tømmes plastikaffald ud i havet, som vikler sig rundt om sæler, skildpadder, delfiner og ender i maver på hvaler, fugle og fisk</p>
+          <section class="section1 scale-in-center">
+          <p class="støtfordi_tekst tilt-in-left-1">Hver dag forurenes naturen med tusindvis af plaststykker, som aldrig forsvinder igen. Hvert minut tømmes plastikaffald ud i havet, som vikler sig rundt om sæler, skildpadder, delfiner og ender i maver på hvaler, fugle og fisk</p>
+        </section>
         </div>
+
         <div class="animationer">
             <div class="container1 vibrate-1">
             <img class="img" id="dunk" src="../img/SVG/dunk.svg">
@@ -137,6 +140,13 @@ color: var(--text-h1);
 
 }
 
+.støtfordi_tekst{
+color: var(--text-h1);
+  margin:2rem;
+  line-height: 1.75rem;
+    width: 500px;
+   }
+
 .vibrate-1 {
 	-webkit-animation: vibrate-1 5s linear infinite both;
 	        animation: vibrate-1 5s linear infinite both;
@@ -154,19 +164,49 @@ color: var(--text-h1);
     margin:2rem;
     color: var(--text-h1);
     width: 500px;
-  
 }
 
-.støtfordi_tekst{
-color: var(--text-h1);
-  margin:2rem;
-  line-height: 1.75rem;
-    width: 500px;
-   }
+/* til overskrift */
+.tilt-in-left-1{animation:tilt-in-left-1 1.5s cubic-bezier(.25,.46,.45,.94) both}
+
+ @keyframes tilt-in-left-1{0%{transform:rotateX(-30deg) translateX(-300px) skewX(-30deg);opacity:0}100%{transform:rotateX(0deg) translateX(0) skewX(0deg);opacity:1}}
 
    }
 
+ /* til infotekster */
+ .scale-in-center {
+    animation: scale-in-center .5s cubic-bezier(.25,.46,.45,.94) both;
+}
 
-
+ @keyframes scale-in-center{0%{transform:scale(0);opacity:1}100%{transform:scale(1);opacity:1}}
 
 </style>
+
+<script>
+    import { gsap } from "gsap";
+        
+        import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+        gsap.registerPlugin(ScrollTrigger);
+gsap.matchMedia().add("(prefers-reduced-motion: no-preference)", () => {
+  const sections = document.querySelectorAll("section");
+  sections.forEach((section) => {
+    const ps = section.querySelectorAll(".section1 p");
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: section,
+          start: "top 90%", // Animationen sættes igang, når toppen a section-elementet rammer 50% ind i viewporten
+          end: "+=300px", // Animationen er slut, når man har scrollet 200px ned
+          scrub: 0.2, // Animationen bindes op på scrollbaren
+        },
+      })
+      .from(ps, {
+        opacity: 0,
+        y: 20,
+        stagger: 0.5,
+      });
+  });
+});
+        
+    </script>

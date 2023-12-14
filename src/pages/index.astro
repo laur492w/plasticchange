@@ -71,6 +71,10 @@ margin-inline: 5rem;
     animation: scale-in-center .5s cubic-bezier(.25,.46,.45,.94) both;
 }
 
+h2{
+    font-family: "Campton-boldDEMO";
+}
+
 
  @keyframes scale-in-center{0%{transform:scale(0);opacity:1}100%{transform:scale(1);opacity:1}}
 @media (min-width: 1000px) {
@@ -92,6 +96,7 @@ justify-content:center;
 
 h2{
     font-size: 2.5rem;
+    font-family: "Campton-boldDEMO";
 }
 
 
@@ -145,21 +150,4 @@ gsap.matchMedia().add("(prefers-reduced-motion: no-preference)", () => {
   });
 });
         
-//         gsap.matchMedia().add("(prefers-reduced-motion: no-preference)", () => {
-//   //GSAP KODE HER ---DER MINDSKER ANIMATIONER FOR KØRESYGE-SÆT DEN ALTID IND
-// })
-
-//         gsap.registerPlugin(ScrollTrigger);
-    
-//       gsap.to(".bidrag_tekst", {
-//         scrollTrigger: {
-//             trigger: ".bidrag_tekst", 
-//             toggleClass:"scale-in-center",
-//             start:"top 20%",
-//             end: "+=300px",
-//             scrub:0.8,
-//         },
-       
-//       });
-
     </script>
