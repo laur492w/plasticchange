@@ -87,12 +87,11 @@ body {
 }
 
 h1 {
-  font-family: "Rubik", sans-serif;
-  color: black;
+  font-family: "Campton-boldDEMO";
 }
 
 h2 {
-  font-family: "Rubik", sans-serif;
+  font-family: "Campton-boldDEMO";
   color: var(--text-secondary);
 }
 
