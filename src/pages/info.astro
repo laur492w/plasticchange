@@ -19,7 +19,7 @@ import Button from "../components/Button.astro"
             <h1 class="h1_støtfordi tilt-in-left-1">DU SKAL<br> STØTTE FORDI</h1>
           </div>
           <section class="section1 scale-in-center">
-          <p class="støtfordi_tekst tilt-in-left-1">Hver dag forurenes naturen med tusindvis af plaststykker, som aldrig forsvinder igen. Hvert minut tømmes plastikaffald ud i havet, som vikler sig rundt om sæler, skildpadder, delfiner og ender i maver på hvaler, fugle og fisk</p>
+          <p class="støtfordi_tekst tilt-in-left-1">...at naturen hver dag forurenes med tusindvis af plaststykker, som aldrig forsvinder igen. At der hvert minut tømmes plastikaffald ud i havet. Og at plastikaffaldet vikler sig rundt om sæler, skildpadder, delfiner og ender i maver på hvaler, fugle og fisk. </p>
         </section>
         </div>
 
@@ -30,7 +30,7 @@ import Button from "../components/Button.astro"
         <div class="container2 vibrate-2">
             <img class="img" id="pose" src="../img/SVG/pose.svg">
         </div>
-        <div class="container3 vibrate-1">
+        <div class="container3 vibrate-3">
             <img class="img" id="flaske1" src="../img/SVG/flaske1.svg">
         </div>
             
@@ -38,15 +38,26 @@ import Button from "../components/Button.astro"
         </div>
 
     
-  
+        <h2 class="plastikforurening">Forbruget af plastik</h2>
+        <section class="section1 scale-in-center">
+          <p class="bidrag_tekst">Vi bruger allerede meget plastik, men kigger vi ud i fremtiden, vil de tal kun stige.<br> Tag et kig herunder for et indblik i, hvordan fremtiden kan se ud, medmindre vi griber ind.</p>
+        
+          </section>
 <div class="info_wrapper">
+  <div class="grafik1">
     <Infografik number = "1" grafik = "../img/SVG/inforgrafik_1.svg" tekst = "I 2017 blev der globalt produceret svimlende 322 millioner tons plastik. Mængden af plastaffald, der ender i havet, forventes at fordoble sig inden 2030. "/> 
-    <Infografik side="right" number="2" grafik = "../img/SVG/info2.svg" tekst = "I 2040 vil plastikforurening  været tredoblet , og 80%  af den forurening vil udgøre engangsplastik"/>   
-    <Infografik number="3" grafik = "../img/SVG/inforgrafik_3.svg"/>   
+  </div>
+  <div class="grafik2">
+    <Infografik side="right" number="2" grafik = "../img/SVG/grafik2_1.svg" tekst = "I 2040 vil plastikforurening  været tredoblet , og 80%  af den forurening vil udgøre engangsplastik"/>   
+  </div>
+    <div class="grafik3">
+    <Infografik number="3" grafik = "../img/SVG/grafik3.svg" tekst = "Sådan fordeles plastikforbruget."/>   
+  </div>
 </div>
-   <div class="testamente-stor">
+  <div class="testamente-stor">
     <Button variant="testamente-stor" tekst= "Opret testamente"/>
 </div>
+
   
 <Footer/>
 </Layout>
@@ -95,7 +106,30 @@ color: var(--text-h1);
 .animationer {
     display: none;
 }
+
+.plastikforurening{
+    text-align: center;
+    margin-top:5rem;
+   
+}
+.bidrag_tekst{
+  margin-inline: 4rem;
+    color: var(--text-primary);
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    line-height: 1.75rem;
+}
+.bidrag_tekst2{
+  margin-inline: 4rem;
+    color: var(--text-primary);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.75rem;
+}
  
+h2{
+    font-family: "Campton-boldDEMO";
+}
 
      @media (min-width: 1000px) {
    .infogrid{
@@ -105,7 +139,25 @@ color: var(--text-h1);
 
    .info_wrapper{
     margin-inline:10rem;
+    display: grid;
+    grid-template-columns: 1fr;
    }
+.grafik1{
+  justify-self: center;
+  align-self: center;
+  width: 60%;
+opacity: 0;
+}
+.grafik2 {
+  justify-self: center;
+  align-self: center;
+  width: 90%;
+}
+   .grafik3{
+    justify-self: center;
+  align-self: center;
+    width: 100%;
+ }
 
    .støt_grid{
  display: flex;
@@ -123,7 +175,7 @@ color: var(--text-h1);
     width: 100%;
 }
 
-.img {
+.animationer img {
     width: 150px;
 }
 
@@ -146,10 +198,44 @@ color: var(--text-h1);
   line-height: 1.75rem;
     width: 500px;
    }
+   .plastikforurening{
+    text-align: center;
+    margin-top:8rem;
+}
 
+h2{
+    font-size: 2.5rem;
+    font-family: "Campton-boldDEMO";
+}
+
+.bidrag_tekst{
+  max-width: 52rem;
+    margin-inline:auto;
+    font-size:1.25rem;
+    color: var(--text-primary);
+    margin-top: 2.5rem;
+}
+
+.bidrag_tekst2{
+  margin-inline: 4rem;
+    color: var(--text-primary);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.75rem;
+}
+
+.opretnu{
+    text-align: center;
+    margin-inline:20rem;
+    font-size:1.25rem;
+    color: var(--text-primary);
+    margin-top: 2.5rem;
+}
+
+/* til grafik i vandet */
 .vibrate-1 {
-	-webkit-animation: vibrate-1 5s linear infinite both;
-	        animation: vibrate-1 5s linear infinite both;
+	-webkit-animation: vibrate-1 3s linear infinite both;
+	        animation: vibrate-1 3s linear infinite both;
 }
 
 
@@ -166,6 +252,11 @@ color: var(--text-h1);
     width: 500px;
 }
 
+.vibrate-3{animation:vibrate-3 4s ease-in-out infinite both}
+
+@keyframes vibrate-3{0%{transform:translate(0)}20%{transform:translate(-2px,2px)}40%{transform:translate(-2px,-2px)}60%{transform:translate(2px,2px)}80%{transform:translate(2px,-2px)}100%{transform:translate(0)}}
+
+
 /* til overskrift */
 .tilt-in-left-1{animation:tilt-in-left-1 1.5s cubic-bezier(.25,.46,.45,.94) both}
 
@@ -180,6 +271,17 @@ color: var(--text-h1);
 
  @keyframes scale-in-center{0%{transform:scale(0);opacity:1}100%{transform:scale(1);opacity:1}}
 
+
+
+
+/* til infografikker 1 og 3 */
+.slide-in-left{animation:slide-in-left .8s cubic-bezier(.25,.46,.45,.94) both}
+
+ @keyframes slide-in-left{0%{transform:translateX(-1000px);opacity:0}100%{transform:translateX(0);opacity:1}}
+
+/* til infografikker 2 */
+ .slide-in-right{animation:slide-in-right .8s cubic-bezier(.25,.46,.45,.94) both}
+@keyframes slide-in-right{0%{transform:translateX(1000px);opacity:0}100%{transform:translateX(0);opacity:1}}
 </style>
 
 <script>
@@ -208,5 +310,36 @@ gsap.matchMedia().add("(prefers-reduced-motion: no-preference)", () => {
       });
   });
 });
-        
+     
+
+
+gsap.to(".grafik1", {
+         scrollTrigger: {
+             trigger: ".grafik1", 
+             start: "top 70%",
+             toggleClass:"slide-in-left",
+      },
+       
+      });
+
+      gsap.to(".grafik2", {
+         scrollTrigger: {
+             trigger: ".grafik2", 
+             start: "top 50%",
+             toggleClass:"slide-in-left",
+
+      },
+       
+      });
+
+      gsap.to(".grafik3", {
+         scrollTrigger: {
+             trigger: ".grafik3", 
+             start: "top 50%",
+             toggleClass:"slide-in-left",
+      },
+       
+      });
+
+ 
     </script>

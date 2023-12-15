@@ -6,7 +6,7 @@ const {grafik,number,tekst,side} = Astro.props
 <div class=`infogrid ${side}`>
     <div class=`card_wrapper ${side}`>
    
-    <img src={grafik} alt="infografik">
+    <img src={grafik} alt="infografik" width="100%" height="auto">
     <p>{tekst}</p>
     </div>
    </div>
@@ -14,7 +14,7 @@ const {grafik,number,tekst,side} = Astro.props
     <style>
  img{
     padding-top: 0.75rem;
-    width:100%;
+    /* width:100%; */
  }
  h3{
     color:  var(--grey-50-color);
@@ -53,7 +53,7 @@ color: var(--grey-500-color);
    } */
 
 p{
-   font-size: 1.25rem;
+   font-size: 1rem;
    font-weight:400;
    line-height: 1.75;
 
@@ -74,7 +74,7 @@ div{
  }
  img{
     padding-top: 0.75rem;
-    width:70%;
+    /* width:150%; */
  }
 
 }

@@ -93,10 +93,12 @@ h1 {
 
 h2 {
   font-family: "Rubik", sans-serif;
+  color: var(--text-secondary);
 }
 
 h3 {
   font-family: "Rubik", sans-serif;
+  color: var(--text-secondary);
 }
 
 p {
