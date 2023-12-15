@@ -4,15 +4,15 @@ import Formular from "./Formular.astro";
 
   
   <div class="hero_grid">
+
 <!-- <img class="hero-pic" src="../img/SVG/herobillede.svg" alt="Plastic i vandet" /> -->
   <div class="hero_landing">
     <h1 class="hero_h1 tilt-in-left-1">GIV EN RENERE<br> VERDEN VIDERE</h1>
   <p class="hero_text ">Kæmp mod plastikforurening nu og i fremtiden</p>
-</div>
+  </div>
 
   <div class="hero-formular">
   <Formular/>
-</div>
   </div>
 
 
@@ -20,16 +20,19 @@ import Formular from "./Formular.astro";
 
 <style>
 .hero_grid {
+  display: flex;
+  flex-direction: column;
   text-align: left;
   
 }
 
 .hero_landing{
-  background-image: url("../img/SVG/herobillede.svg");
-  background-size: cover;
   padding-top: 4rem;
   padding-bottom: 1rem;
   padding-left: 1rem;
+  background-image: url("../img/SVG/herobillede.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 
@@ -67,10 +70,11 @@ p {
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr; */
   display: flex;
   flex-direction: row;
-  background-image: url("../img/SVG/herobillede.svg");
-  background-size: cover;
   justify-content: space-between;
   gap: 5rem;
+  background-image: url("../img/SVG/herobillede.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .hero_landing{
@@ -80,6 +84,7 @@ p {
   flex-direction: column;
   /* grid-row:  2/4;
   grid-column: 1/6; */
+  background: none;
 
 }
 .hero_text{
