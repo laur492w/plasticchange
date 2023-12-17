@@ -65,7 +65,6 @@ form {
 .form-felt {
   display: grid;
   font-size:0.875rem;
- 
 }
 
 /*** gør så det rykker sig på næste linje ***/
@@ -101,12 +100,11 @@ input[type=email] {
   margin: 8px 0;
   box-sizing: border-box;
   border: 1.5px solid var(--grey-500-color);;
-
   outline: none;
 }
 
 input[type=email]:focus{
-  border: 1.5px solid var(--grey-500-color);
+  border: 1.5px solid var(--grey-900-color);
 }
 
 h2{
@@ -164,7 +162,7 @@ p{
     padding: 8px 12px;
     margin: 3px 0;
     box-sizing: border-box;
-    border: 1.5px solid var(--grey-500-color);
+    border: 1.5px solid var(--grey-200-color);
     -webkit-transition: 0.5s;
     transition: 0.5s;
     outline: none;
@@ -172,12 +170,21 @@ p{
 
   input[type="text"]:focus,
   input[type="email"]:focus {
-    border: 1.5px solid var(--grey-900-color);
+    border: 1.8px solid var(--grey-900-color);
   }
+
+input[type=text]::placeholder,
+input[type=email]::placeholder {
+  color: rgb(198, 197, 197);
+  opacity: 1; /* Firefox */
+}
+
+::-ms-input-placeholder { /* Edge 12 -18 */
+  color: rgb(198, 197, 197);
+}
 
   h2 {
     font-family: "Campton-boldDEMO";
-  
     font-size: 1.9rem;
   }
 
