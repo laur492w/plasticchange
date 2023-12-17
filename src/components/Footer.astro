@@ -32,7 +32,7 @@
     
 
 .logo {
-    margin-top: 20rem;
+    margin-top: var(--spacing-header);
 }
 
 .social{
@@ -42,7 +42,7 @@
 
 #logo {
     width: 10rem;
-    margin:  1rem 2rem 0rem 2rem;
+    margin: var(--spacing-sub-header) var(--spacing-generel) 0 var(--spacing-generel);
     position: relative;
     
 }
@@ -51,8 +51,8 @@
     background-image: url(../img/SVG/footer.svg);
     width: 100%;
     background-size: cover;
-    padding-top: 15rem;
-    margin-top: 15rem;
+    padding-top: var(--spacing-footer);
+    margin-top: var(--spacing-footer);
 }
 
 
@@ -60,22 +60,22 @@
 .contact, .links, .social {
     text-align: left;
     position: relative;
-    margin-bottom: 2rem;
+    margin-bottom: var(--spacing-generel);
     color: var(--text-tertiaer);
-    margin-inline:2rem;
+    margin-inline: var(--spacing-generel);
 }
    
 .social{
-    margin-bottom: 2rem;
+    margin-bottom: var(--spacing-generel);
     width: 1rem;
 }
 .links{
-    line-height: 3rem;
+    line-height: var(--spacing-line-height-footer);
 }
 
 .contact{
-    line-height: 3rem;
-    margin-top: 1rem;
+    line-height: var(--spacing-line-height-footer);
+    margin-top: var( --spacing-sub-header);
 }
 
 
@@ -83,7 +83,7 @@
     text-decoration: none;
     position: relative;
     text-decoration: none;
-    line-height: 2rem;
+    line-height: var(--spacing-generel);
     color: var(--text-tertiaer);
 }
 
@@ -98,8 +98,8 @@
     .footer {
     width: 100%;
     background-size: cover;
-    padding-top: 15rem;
-    margin-top: 15rem;
+    padding-top: var(--spacing-footer);
+    margin-top: var(--spacing-footer);
 }
 .overlay {
     display: flex;
@@ -108,7 +108,6 @@
 
 .contact, .links, .social {
     text-align: left;
-
     margin-bottom: 5rem;
     color: var(--text-tertiaer);
     margin-inline:0rem;

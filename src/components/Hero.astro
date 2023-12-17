@@ -27,9 +27,9 @@ import Formular from "./Formular.astro";
 }
 
 .hero_landing{
-  padding-top: 4rem;
-  padding-bottom: 1rem;
-  padding-left: 1rem;
+  padding-top: var(--spacing-knapper-info);
+  padding-bottom: var(--spacing-sub-header);
+  padding-left: var(--spacing-sub-header);
   background-image: url("../img/SVG/herobillede.svg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -40,7 +40,7 @@ import Formular from "./Formular.astro";
 padding-bottom: var(--spacing-vandret-spacing-32);
 color: var(--grey-50-color);
 font-family: "Campton-boldDEMO";
-margin-top: 4rem;
+margin-top: var(--spacing-knapper-info);
 
 
 }
@@ -48,7 +48,7 @@ margin-top: 4rem;
 .hero_h1{
   color: var(--grey-50-color);
   font-family: "Campton-boldDEMO";
-  margin-top: 1rem;
+  margin-top: var(--spacing-sub-header);
   margin-bottom: 10rem;
   
 }
@@ -65,9 +65,6 @@ p {
 
 
  .hero_grid{
-  /* display:grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -82,13 +79,11 @@ p {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  /* grid-row:  2/4;
-  grid-column: 1/6; */
   background: none;
 
 }
 .hero_text{
-  margin:2rem;
+  margin: var(--spacing-generel);
   align-self: center;
   position: relative;
 }
@@ -109,19 +104,19 @@ p {
 
   .hero_h1{
     font-size: 3.75rem;
-    margin-inline: 2rem;
+    margin-inline: var(--spacing-generel);
     margin-top:5rem;
   }
   p {
   color: var(--grey-50-color);
     grid-row:  5/6;
     grid-column: 1/4;
-    margin:2rem;
+    margin:var(--spacing-generel);
     font-size: 1.25rem;
 }
 .hero-formular{
-  margin-bottom:3rem;
-  margin-right: 2rem;
+  margin-bottom:var(--spacing-forumlar);
+  margin-right: var(--spacing-generel);
   max-width: 40%;
 }
 

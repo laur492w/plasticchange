@@ -29,33 +29,37 @@ html {
 
   /* Spacing */
 
-  --spacing-xxs: 0.5rem;
+  --spacing-xxs: 0.625rem;
   /* --spacing-xs: 0.75rem; */
   --spacing-s: 1rem;
   --spacing-m: 1.25rem;
   --spacing-l: 1.5rem;
   --spacing-xl: 2rem;
-  --spacing-xxl: 4rem;
-  --spacing-xxxl: 6.125rem;
-  /* --spacing-xxxxl: 8rem; */
-  --spacing-xxxxxl: 16rem;
-  --spacing-xxxxxxl: 5rem;
   --spacing-xxxxxxxl: 3rem;
-  --spacing-rare: 18.625rem;
+  --spacing-xxl: 4rem;
+  --spacing-xxxxxxl: 5rem;
+  --spacing-xxxl: 6rem;
+  --spacing-xxxxl: 9rem;
+  --spacing-xxxxxl: 15rem;
+  --spacing-rare: 20rem;
+  --spacing-extreme: 50rem;
 
   /*Tokens spacing*/
-  --spacing-vilkaar: var(--spacing-xxs);
-  --spacing-sub-header: var(--spacing-s);
-  --spacing-infocard-text: var(--spacing-s);
-  --spacing-button: var(--spacing-m);
-  --spacing-mellem-knapper: var(--spacing-l);
-  --spacing-infocard-ikon: var(--spacing-xl);
+  --spacing-button-padding: var(--spacing-xxs); /**/
+  --spacing-sub-header: var(--spacing-s); /**/
+  --spacing-infocard-text: var(--spacing-s); /**/
+  --spacing-button: var(--spacing-m); /**/
+  --spacing-mellem-knapper: var(--spacing-l); /**/
+  --spacing-infocard-ikon: var(--spacing-xl); /**/
+  --spacing-generel: var(--spacing-xl); /**/
   --spacing-knapper-info: var(--spacing-xxl);
   --spacing-info-grid: var(--spacing-xxxl);
-  --spacing-header: var(--spacing-rare);
-  --spacing-section1: var(--spacing-xxxxxl);
-  --spacing-forumlar: var(--spacing-xxxxxxxl);
+  --spacing-header: var(--spacing-rare); /**/
+  --spacing-footer: var(--spacing-xxxxxl); /**/
+  --spacing-forumlar: var(--spacing-xxxxxxxl); /**/
+  --spacing-line-height-footer: var(--spacing-xxxxxxxl); /**/
   --spacing-forumlar-top: var(--spacing-xxxxxxl);
+  --spacing-section: var(--spacing-xxxxl);
   /* Tokens colors */
 
   /* Text */
